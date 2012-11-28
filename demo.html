@@ -17,14 +17,13 @@
 <script type="text/javascript" src="ShipArranger.js"></script>
 <script type="text/javascript">
 var ships = [
-	{'name': 'battleship', 'size': 4, 'cnt': 1},
-	{'name': 'cruiser',    'size': 3, 'cnt': 2},
-	{'name': 'destroyer',  'size': 2, 'cnt': 3},
-	{'name': 'submarine',  'size': 1, 'cnt': 4}
+    {'name': 'battleship', 'size': 4, 'cnt': 1},
+    {'name': 'cruiser',    'size': 3, 'cnt': 2},
+    {'name': 'destroyer',  'size': 2, 'cnt': 3},
+    {'name': 'submarine',  'size': 1, 'cnt': 4}
 ];
 
-var drawGameBoard = function()
-{
+var drawGameBoard = function () {
     var arranger1 = new ShipArranger(),
         arranger2 = new ShipArranger();
 
@@ -43,8 +42,7 @@ var drawGameBoard = function()
 
 drawGameBoard();
 
-document.getElementById('redraw').onclick = function()
-{
+document.getElementById('redraw').onclick = function () {
     drawGameBoard();
 }
 </script>

@@ -12,16 +12,16 @@
 }
 
 table {
-	border-collapse: collapse;
-	margin: 0px auto
+    border-collapse: collapse;
+    margin: 0px auto
 }
 
 table td {
-	padding: 0px;
-	border: solid 1px #ccc;
-	font-size: 1px;
-	width: 25px;
-	height: 25px;
+    padding: 0px;
+    border: solid 1px #ccc;
+    font-size: 1px;
+    width: 25px;
+    height: 25px
 }
 
 input {

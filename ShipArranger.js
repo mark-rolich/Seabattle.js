@@ -13,7 +13,7 @@
 */
 var ShipArranger = function (width, height) {
     "use strict";
-	var map     = [],
+    var map     = [],
         xh      = height || 10,
         yh      = width || 10,
         init = function () {
@@ -115,23 +115,22 @@ var ShipArranger = function (width, height) {
         }
     };
 
-	this.arrange = function (ships) {
-		var i           = 0,
+    this.arrange = function (ships) {
+        var i           = 0,
             cnt         = 0,
             ship        = [],
             overflow    = 0;
 
-		for (i = 0; i < ships.length; i++) {
+        for (i = 0; i < ships.length; i++) {
+            cnt = 0;
 
-			cnt = 0;
+            do {
+                ship = createShip(ships[i].size);
 
-			do {
-				ship = createShip(ships[i].size);
-
-				if (isRegionFree(ship)) {
-					placeShip(ship);
-					cnt++;
-				}
+                if (isRegionFree(ship)) {
+                    placeShip(ship);
+                    cnt++;
+                }
 
                 overflow++;
 
@@ -139,12 +138,11 @@ var ShipArranger = function (width, height) {
                     throw ('The number of ships is too high or dimensions of board are too small');
                 }
 
-			} while (cnt < ships[i].cnt);
+            } while (cnt < ships[i].cnt);
+        }
 
-		}
+        return map;
+    };
 
-		return map;
-	};
-
-	init();
+    init();
 };
