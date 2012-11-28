@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"
+        "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html>
+<head>
+<title>Sea battle</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+<body>
+
+<div class="gameboard">
+    <div id="player1">&nbsp;</div>
+    <div id="player2">&nbsp;</div>
+    <input type="button" id="redraw" value="Redraw">
+</div>
+
+<script type="text/javascript" src="ShipArranger.js"></script>
+<script type="text/javascript">
+var ships = [
+	{'name': 'battleship', 'size': 4, 'cnt': 1},
+	{'name': 'cruiser',    'size': 3, 'cnt': 2},
+	{'name': 'destroyer',  'size': 2, 'cnt': 3},
+	{'name': 'submarine',  'size': 1, 'cnt': 4}
+];
+
+var drawGameBoard = function()
+{
+    var arranger1 = new ShipArranger(),
+        arranger2 = new ShipArranger();
+
+    try {
+        arranger1.render(arranger1.arrange(ships), 'player1', ['blue', 'red', '#fff']);
+    } catch (ex) {
+        document.getElementById('player1').innerHTML = ex;
+    }
+
+    try {
+        arranger1.render(arranger2.arrange(ships), 'player2', ['blue', 'green', '#fff']);
+    } catch (ex) {
+        document.getElementById('player2').innerHTML = ex;
+    }
+};
+
+drawGameBoard();
+
+document.getElementById('redraw').onclick = function()
+{
+    drawGameBoard();
+}
+</script>
+</body>
+</html>

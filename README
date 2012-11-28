@@ -1,0 +1,11 @@
+This Javascript package randomly arranges ships for sea battle game.
+
+Supports:
+- adjustable number of each type of ship
+- adjustable dimensions of board
+- if number of ships is too high or dimensions of board are too small
+  exception will be thrown
+- color scheme for sea, ships and superstructures
+- random orientation of the ships (vertical/horizontal)
+
+Copyright (C) 2012  Mark Rolich

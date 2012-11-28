@@ -1,0 +1,32 @@
+.gameboard {
+    margin: 0px auto;
+    width: 625px;
+    overflow: hidden;
+    text-align: center
+}
+
+.gameboard div {
+    float: left;
+    margin: 25px;
+    width: 262px
+}
+
+table {
+	border-collapse: collapse;
+	margin: 0px auto
+}
+
+table td {
+	padding: 0px;
+	border: solid 1px #ccc;
+	font-size: 1px;
+	width: 25px;
+	height: 25px;
+}
+
+input {
+    margin: 0px auto;
+    width: 100px;
+    display: block;
+    clear: both
+}
